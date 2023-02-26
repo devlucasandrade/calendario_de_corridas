@@ -1,4 +1,5 @@
-import 'package:calendario_de_corridas/src/app/home/page/home_page.dart';
+import 'package:calendario_de_corridas/src/app/navigation/page/navigation_page.dart';
+import 'package:calendario_de_corridas/src/shared/theme/themes.dart';
 import 'package:flutter/material.dart';
 
 class AppWidget extends StatelessWidget {
@@ -7,14 +8,12 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        useMaterial3: true,
-      ),
+      theme: lightTheme,
       debugShowCheckedModeBanner: false,
       title: 'Calendário de Corridas',
       initialRoute: '/',
       routes: {
-        '/': (context) => const HomePage(),
+        '/': (context) => const NavigationPage(),
       },
     );
   }
