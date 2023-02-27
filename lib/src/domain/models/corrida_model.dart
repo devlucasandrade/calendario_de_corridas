@@ -3,6 +3,7 @@ class CorridaModel {
   String nome;
   String local;
   String data;
+  String? horario;
   String inscricoes;
   String distancia;
   String realizacao;
@@ -13,6 +14,7 @@ class CorridaModel {
     required this.nome,
     required this.local,
     required this.data,
+    this.horario,
     required this.inscricoes,
     required this.distancia,
     required this.realizacao,

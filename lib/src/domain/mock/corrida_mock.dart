@@ -21,6 +21,7 @@ final corridaMock = [
         nome: 'Beach Cross',
         local: 'Jardim de Alah - Salvador',
         data: '05/03/2023',
+        horario: '6:30h',
         inscricoes:
             'Através da FBA ou no site: http://www.corridasonline.com.br/proximoseventos.aspx',
         distancia: '5,5km',
@@ -29,7 +30,7 @@ final corridaMock = [
       ),
       CorridaModel(
         corridaId: 2,
-        nome: 'Corrida TPM RG+',
+        nome: 'Corrida TPM Análise',
         local: 'Feria de Santana',
         data: '12/03/2023',
         inscricoes:

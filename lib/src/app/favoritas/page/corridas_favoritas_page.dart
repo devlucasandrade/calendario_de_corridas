@@ -1,3 +1,5 @@
+import 'package:calendario_de_corridas/src/app/home/widgets/custom_drawer.dart';
+import 'package:calendario_de_corridas/src/components/app_bar.dart';
 import 'package:flutter/material.dart';
 
 class CorridasFavoritasPage extends StatefulWidget {
@@ -10,6 +12,10 @@ class CorridasFavoritasPage extends StatefulWidget {
 class _CorridasFavoritasPageState extends State<CorridasFavoritasPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      drawer: const CustomDrawer(),
+      appBar: AppBarWidget(textTitle: 'Corridas Favoritas'),
+      body: Container(),
+    );
   }
 }

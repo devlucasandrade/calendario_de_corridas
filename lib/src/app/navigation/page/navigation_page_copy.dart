@@ -1,6 +1,6 @@
 import 'package:calendario_de_corridas/src/app/configuracoes/page/configuracoes_page.dart';
-import 'package:calendario_de_corridas/src/app/corridas/page/corridas_favoritas_page.dart';
-import 'package:calendario_de_corridas/src/app/corridas/page/corridas_mes_page.dart';
+import 'package:calendario_de_corridas/src/app/favoritas/page/corridas_favoritas_page.dart';
+import 'package:calendario_de_corridas/src/app/calendario/page/calendario_de_corridas_page.dart';
 import 'package:calendario_de_corridas/src/app/home/page/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +15,7 @@ class _NavigationPageState extends State<NavigationPage> {
   int currentIndex = 0;
   final pages = [
     const HomePage(),
-    const CorridasMesPage(),
+    const CalendarioDeCorridasPage(),
     const CorridasFavoritasPage(),
     const ConfiguracoesPage(),
   ];
