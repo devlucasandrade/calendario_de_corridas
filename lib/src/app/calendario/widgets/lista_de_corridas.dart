@@ -1,4 +1,3 @@
-import 'package:calendario_de_corridas/src/app/calendario/page/corridas_detalhes_page.dart';
 import 'package:calendario_de_corridas/src/components/app_bar.dart';
 import 'package:calendario_de_corridas/src/domain/models/mes_model.dart';
 import 'package:calendario_de_corridas/src/shared/text/text_styles.dart';

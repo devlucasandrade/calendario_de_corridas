@@ -14,7 +14,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade300,
       drawer: const CustomDrawer(index: 0),
       appBar: AppBarWidget(
         textTitle: 'CORRIDAS DE RUA 2023 - BAHIA',

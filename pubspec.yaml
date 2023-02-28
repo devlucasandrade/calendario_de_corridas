@@ -11,6 +11,8 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^4.0.3
+  intl: ^0.18.0
+  table_calendar: ^3.0.9
   url_launcher: ^6.1.10
 
 dev_dependencies:

@@ -1,5 +1,4 @@
 import 'package:calendario_de_corridas/src/shared/colors/app_colors.dart';
-import 'package:calendario_de_corridas/src/shared/text/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -35,4 +34,5 @@ ThemeData get lightTheme => ThemeData(
           },
         ),
       ),
+      scaffoldBackgroundColor: Colors.grey.shade300,
     );
