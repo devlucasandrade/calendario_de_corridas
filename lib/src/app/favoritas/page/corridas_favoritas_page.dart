@@ -13,7 +13,7 @@ class _CorridasFavoritasPageState extends State<CorridasFavoritasPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const CustomDrawer(),
+      drawer: const CustomDrawer(index: 2),
       appBar: AppBarWidget(textTitle: 'Corridas Favoritas'),
       body: Container(),
     );

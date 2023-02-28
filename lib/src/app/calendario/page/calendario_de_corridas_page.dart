@@ -19,12 +19,12 @@ class _CalendarioDeCorridasPageState extends State<CalendarioDeCorridasPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const CustomDrawer(),
+      drawer: const CustomDrawer(index: 1),
       appBar: AppBarWidget(
         textTitle: 'Calendário de Corridas - Bahia',
       ),
       body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 15),
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
@@ -95,7 +95,7 @@ class _CalendarioDeCorridasPageState extends State<CalendarioDeCorridasPage> {
             onPressed: () => Navigator.of(context).pop(),
             child: Text(
               'OK',
-              style: TextStyles.title2(),
+              style: TextStyles.titleXGrande(),
             ),
           ),
         ],

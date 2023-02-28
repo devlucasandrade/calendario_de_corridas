@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TextStyles {
-  static TextStyle title1({
+  static TextStyle titleGrande({
     Color? color,
     FontWeight? fontWeight,
   }) {
@@ -14,7 +14,7 @@ class TextStyles {
     );
   }
 
-  static TextStyle title2({
+  static TextStyle titleXGrande({
     Color? color,
     FontWeight? fontWeight,
   }) {
@@ -25,7 +25,7 @@ class TextStyles {
     );
   }
 
-  static TextStyle title3({
+  static TextStyle titleXXGrande({
     Color? color,
     FontWeight? fontWeight,
   }) {
@@ -47,18 +47,20 @@ class TextStyles {
     );
   }
 
-  static TextStyle text1({
+  static TextStyle textoNormal({
     Color? color,
     FontWeight? fontWeight,
+    TextDecoration? decoration,
   }) {
     return GoogleFonts.poppins(
       color: color ?? AppColors.textColors.black,
       fontWeight: fontWeight ?? FontWeight.normal,
       fontSize: FonteSize.normal,
+      decoration: decoration,
     );
   }
 
-  static TextStyle text2({
+  static TextStyle textoGrande({
     Color? color,
     FontWeight? fontWeight,
   }) {

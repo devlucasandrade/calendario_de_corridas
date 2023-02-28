@@ -26,7 +26,7 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
     );
 
     return Scaffold(
-      drawer: const CustomDrawer(),
+      drawer: const CustomDrawer(index: 3),
       appBar: AppBarWidget(
         textTitle: 'Configurações',
       ),
@@ -43,7 +43,7 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
               children: [
                 Text(
                   'Notificações',
-                  style: TextStyles.text2(),
+                  style: TextStyles.textoGrande(),
                 ),
                 Switch(
                   thumbIcon: thumbIcon,
