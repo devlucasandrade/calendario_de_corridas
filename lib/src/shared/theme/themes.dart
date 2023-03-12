@@ -4,35 +4,24 @@ import 'package:google_fonts/google_fonts.dart';
 
 ThemeData get lightTheme => ThemeData(
       useMaterial3: true,
-      appBarTheme: const AppBarTheme(
+      appBarTheme: AppBarTheme(
+        backgroundColor: AppColors.basicColors.backgroudGrey,
+        surfaceTintColor: AppColors.basicColors.backgroudGrey,
+        shadowColor: AppColors.basicColors.backgroudGrey,
+        elevation: 0,
         centerTitle: true,
-        titleTextStyle: TextStyle(
-          color: Colors.black,
+        titleTextStyle: GoogleFonts.poppins(
+          color: AppColors.textColors.black,
           fontSize: 18,
         ),
       ),
-      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-        backgroundColor: Colors.grey,
-      ),
-      navigationDrawerTheme: NavigationDrawerThemeData(
-        indicatorColor: Colors.grey.shade400,
-        labelTextStyle: MaterialStateProperty.resolveWith<TextStyle?>(
-          (states) {
-            if (states.contains(MaterialState.selected)) {
-              return GoogleFonts.poppins(
-                color: AppColors.textColors.black,
-                fontWeight: FontWeight.bold,
-                fontSize: 12,
-              );
-            } else {
-              return GoogleFonts.poppins(
-                color: AppColors.textColors.black,
-                fontWeight: FontWeight.normal,
-                fontSize: 12,
-              );
-            }
-          },
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        backgroundColor: AppColors.basicColors.grey,
+        selectedItemColor: AppColors.basicColors.black,
+        unselectedItemColor: AppColors.basicColors.grey,
+        selectedLabelStyle: GoogleFonts.poppins(
+          fontWeight: FontWeight.bold,
         ),
       ),
-      scaffoldBackgroundColor: Colors.grey.shade300,
+      scaffoldBackgroundColor: AppColors.basicColors.backgroudGrey,
     );

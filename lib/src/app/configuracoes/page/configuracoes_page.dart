@@ -1,4 +1,3 @@
-import 'package:calendario_de_corridas/src/app/home/widgets/custom_drawer.dart';
 import 'package:calendario_de_corridas/src/components/app_bar.dart';
 import 'package:calendario_de_corridas/src/shared/text/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +25,6 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
     );
 
     return Scaffold(
-      drawer: const CustomDrawer(index: 3),
       appBar: AppBarWidget(
         textTitle: 'Configurações',
       ),

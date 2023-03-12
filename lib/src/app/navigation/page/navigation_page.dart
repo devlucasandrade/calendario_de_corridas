@@ -28,8 +28,6 @@ class _NavigationPageState extends State<NavigationPage> {
         currentIndex: currentIndex,
         onTap: (index) => setState(() => currentIndex = index),
         iconSize: 30,
-        selectedItemColor: Colors.black,
-        unselectedItemColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home_filled),

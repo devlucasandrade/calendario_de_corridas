@@ -1,10 +1,10 @@
 import 'package:calendario_de_corridas/src/app/calendario/widgets/lista_de_corridas.dart';
-import 'package:calendario_de_corridas/src/app/home/widgets/custom_drawer.dart';
 import 'package:calendario_de_corridas/src/components/app_bar.dart';
+import 'package:calendario_de_corridas/src/components/container_padrao.dart';
+import 'package:calendario_de_corridas/src/components/titulos_xgrande.dart';
 import 'package:calendario_de_corridas/src/domain/mock/corrida_mock.dart';
 import 'package:calendario_de_corridas/src/shared/text/text_styles.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 class CalendarioDeCorridasPage extends StatefulWidget {
   const CalendarioDeCorridasPage({super.key});
@@ -20,78 +20,61 @@ class _CalendarioDeCorridasPageState extends State<CalendarioDeCorridasPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const CustomDrawer(index: 1),
       appBar: AppBarWidget(
-        textTitle: 'Calendário de Corridas - Bahia',
+        textTitle: 'Calendário de Corridas',
       ),
       body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 15),
-        child: Material(
-          elevation: 10,
-          borderRadius: const BorderRadius.all(
-            Radius.circular(20),
-          ),
-          child: CalendarDatePicker(
-            initialDate: DateTime.now(),
-            firstDate: DateTime.parse('2023-01-01'),
-            lastDate: DateTime.parse('2023-12-31'),
-            onDateChanged: (value) {},
-          ),
+        padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+        child: ListView.separated(
+          separatorBuilder: (context, index) => const SizedBox(height: 5),
+          itemCount: corridasListMock.length,
+          itemBuilder: (context, index) {
+            final mes = corridasListMock[index];
+
+            return GestureDetector(
+              onTap: () {
+                mes.corridas!.isNotEmpty
+                    ? Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ListaDeCorridas(
+                            mesId: mes,
+                          ),
+                        ),
+                      )
+                    : openDialog(mes.nomeMes);
+              },
+              child: Column(
+                children: [
+                  ContainerPadrao(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 15,
+                    ),
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    height: MediaQuery.of(context).size.height * 0.09,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text(
+                          mes.nomeMes.toUpperCase(),
+                          style: TextStyles.meses(),
+                        ),
+                        mes.corridas!.isEmpty
+                            ? const SizedBox(height: 20)
+                            : Text(
+                                '${mes.corridas?.length} corridas',
+                                style: Theme.of(context).textTheme.labelLarge,
+                              ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            );
+          },
         ),
-
-        // GridView.builder(
-        //   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        //     crossAxisCount: 2,
-        //     mainAxisSpacing: 10,
-        //     crossAxisSpacing: 10,
-        //     childAspectRatio: 1.6,
-        //   ),
-        //   itemCount: corridasListMock.length,
-        //   itemBuilder: (context, index) {
-        //     final mes = corridasListMock[index];
-
-        //     return GestureDetector(
-        //       onTap: () {
-        //         mes.corridas!.isNotEmpty
-        //             ? Navigator.push(
-        //                 context,
-        //                 MaterialPageRoute(
-        //                   builder: (context) => ListaDeCorridas(
-        //                     mesId: mes,
-        //                   ),
-        //                 ),
-        //               )
-        //             : openDialog(mes.nomeMes);
-        //       },
-        //       child: Container(
-        //         padding:
-        //             const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-        //         decoration: BoxDecoration(
-        //           border: Border.all(width: 2, color: Colors.black),
-        //           borderRadius: const BorderRadius.all(
-        //             Radius.circular(10),
-        //           ),
-        //         ),
-        //         child: Column(
-        //           mainAxisAlignment: MainAxisAlignment.spaceAround,
-        //           crossAxisAlignment: CrossAxisAlignment.center,
-        //           children: [
-        //             Text(
-        //               mes.nomeMes.toUpperCase(),
-        //               style: TextStyles.meses(),
-        //             ),
-        //             mes.corridas!.isEmpty
-        //                 ? const SizedBox(height: 20)
-        //                 : Text(
-        //                     '${mes.corridas?.length} corridas',
-        //                     style: Theme.of(context).textTheme.labelLarge,
-        //                   ),
-        //           ],
-        //         ),
-        //       ),
-        //     );
-        //   },
-        // ),
       ),
     );
   }
