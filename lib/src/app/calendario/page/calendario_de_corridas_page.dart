@@ -1,7 +1,6 @@
 import 'package:calendario_de_corridas/src/app/calendario/widgets/lista_de_corridas.dart';
 import 'package:calendario_de_corridas/src/components/app_bar.dart';
 import 'package:calendario_de_corridas/src/components/container_padrao.dart';
-import 'package:calendario_de_corridas/src/components/titulos_xgrande.dart';
 import 'package:calendario_de_corridas/src/domain/mock/corrida_mock.dart';
 import 'package:calendario_de_corridas/src/shared/text/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +20,7 @@ class _CalendarioDeCorridasPageState extends State<CalendarioDeCorridasPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarWidget(
-        textTitle: 'Calendário de Corridas',
+        textTitle: 'CALENDÁRIO DE CORRIDAS',
       ),
       body: Container(
         padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
@@ -46,10 +45,11 @@ class _CalendarioDeCorridasPageState extends State<CalendarioDeCorridasPage> {
               },
               child: Column(
                 children: [
+                  const SizedBox(height: 10),
                   ContainerPadrao(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 20,
-                      vertical: 15,
+                      vertical: 10,
                     ),
                     width: MediaQuery.of(context).size.width * 0.9,
                     height: MediaQuery.of(context).size.height * 0.09,
