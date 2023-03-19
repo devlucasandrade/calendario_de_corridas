@@ -16,7 +16,6 @@ ThemeData get lightTheme => ThemeData(
         ),
       ),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        backgroundColor: AppColors.basicColors.grey,
         selectedItemColor: AppColors.basicColors.black,
         unselectedItemColor: AppColors.basicColors.grey,
         selectedLabelStyle: GoogleFonts.poppins(
