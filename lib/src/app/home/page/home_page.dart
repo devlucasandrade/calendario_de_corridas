@@ -1,6 +1,7 @@
 import 'package:calendario_de_corridas/src/app/home/widgets/dicas_widget.dart';
 import 'package:calendario_de_corridas/src/app/home/widgets/proximas_cinco_corridas.dart';
 import 'package:calendario_de_corridas/src/components/app_bar.dart';
+import 'package:calendario_de_corridas/src/shared/colors/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,9 +22,8 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.fromLTRB(15, 10, 15, 0),
         child: Column(
           children: const [
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             DicasWidget(),
-            SizedBox(height: 20),
             Spacer(),
             ProximasCincoCorridas(),
           ],

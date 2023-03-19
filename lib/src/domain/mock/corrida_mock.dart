@@ -38,6 +38,15 @@ final corridaMock = [
       ),
       CorridaModel(
         corridaId: 3,
+        nome: 'Alpha Night Run',
+        local: 'Shopping Paralela',
+        data: '18/03/2023',
+        inscricoes: 'https://www.centraldacorrida.com.br/alphanightrun',
+        distancia: '5 e 10 Km',
+        realizacao: 'Heads Assessoria e Eventos Esportivos',
+      ),
+      CorridaModel(
+        corridaId: 4,
         nome: 'STFRS Boulevard Shopping',
         local: 'Feira de Santana',
         data: '26/03/2023',
@@ -46,7 +55,7 @@ final corridaMock = [
         realizacao: 'Real Time Sports S.A.',
       ),
       CorridaModel(
-        corridaId: 4,
+        corridaId: 5,
         nome: 'Salvador 10 Milhas',
         local: 'Ponta de Humaitá',
         data: '26/03/2023',
@@ -59,7 +68,17 @@ final corridaMock = [
   MesModel(
     mesId: 4,
     nomeMes: 'Abril',
-    corridas: [],
+    corridas: [
+      CorridaModel(
+        corridaId: 6,
+        nome: 'Teste de Data',
+        local: 'Em casa',
+        data: '01/04/2023',
+        inscricoes: 'www.nenhum.com',
+        distancia: '5Km',
+        realizacao: 'Nada aqui',
+      ),
+    ],
   ),
   MesModel(
     mesId: 5,
