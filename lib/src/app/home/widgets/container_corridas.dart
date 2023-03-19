@@ -14,16 +14,12 @@ class ContainerCorridas extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height * .2;
-    const padding = EdgeInsets.all(20);
-    const borderRadius = BorderRadius.all(Radius.circular(20));
-
     return Material(
       elevation: 5,
       borderRadius: const BorderRadius.all(
         Radius.circular(20),
       ),
-      child: Stack(
+      child: Column(
         children: [
           Container(
             decoration: BoxDecoration(
@@ -33,28 +29,12 @@ class ContainerCorridas extends StatelessWidget {
                 ),
                 fit: BoxFit.cover,
               ),
-              borderRadius: borderRadius,
-            ),
-            height: height,
-            padding: padding,
-            // child: child,
-          ),
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: borderRadius,
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Colors.white.withOpacity(0),
-                  Colors.white,
-                ],
-                stops: const [0.4, 0.6],
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(20),
+                topRight: Radius.circular(20),
               ),
             ),
-            height: height,
-            padding: padding,
-            // child: child,
+            height: MediaQuery.of(context).size.height * .12,
           ),
           Container(
             decoration: BoxDecoration(
@@ -62,10 +42,12 @@ class ContainerCorridas extends StatelessWidget {
                 width: 2,
                 color: Colors.black.withOpacity(0.2),
               ),
-              borderRadius: borderRadius,
+              borderRadius: const BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20),
+              ),
             ),
-            height: height,
-            padding: padding,
+            padding: const EdgeInsets.all(15),
             child: child,
           ),
         ],
