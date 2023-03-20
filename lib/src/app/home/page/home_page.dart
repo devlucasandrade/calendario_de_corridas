@@ -1,7 +1,6 @@
 import 'package:calendario_de_corridas/src/app/home/widgets/dicas_widget.dart';
 import 'package:calendario_de_corridas/src/app/home/widgets/proximas_cinco_corridas.dart';
 import 'package:calendario_de_corridas/src/components/app_bar.dart';
-import 'package:calendario_de_corridas/src/shared/colors/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
