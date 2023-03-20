@@ -4,12 +4,14 @@ class ContainerPadrao extends StatelessWidget {
   final double? width;
   final double? height;
   final EdgeInsets? padding;
+  final EdgeInsets? margin;
   final Widget child;
   const ContainerPadrao({
     super.key,
     this.width,
     this.height,
     this.padding,
+    this.margin,
     required this.child,
   });
 
@@ -34,6 +36,7 @@ class ContainerPadrao extends StatelessWidget {
         width: width,
         height: height,
         padding: padding,
+        margin: margin,
         child: child,
       ),
     );
